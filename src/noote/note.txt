@@ -1,0 +1,26 @@
+    shipping() {
+      var num = this.dataCart.reduce(
+        (acc, item) => acc + Number(item.srqty),
+        0
+      );
+
+      let price = 0.0;
+      if (num >= 36) {
+        price = 28000;
+      } else if (num >= 25) {
+        price = 24000;
+      } else if (num >= 13) {
+        price = 19000;
+      } else if (num >= 6) {
+        price = 15000;
+      } else if (num >= 1) {
+        price = 12000;
+      } else {
+        price = 0;
+      }
+      return price;
+    }
+
+
+
+            // await new Promise(resolve => setTimeout(resolve, 100));
